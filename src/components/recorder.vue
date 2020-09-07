@@ -273,7 +273,8 @@
       failedUpload     : { type: Function },
       beforeUpload     : { type: Function },
       successfulUpload : { type: Function },
-      selectRecord     : { type: Function }
+      selectRecord     : { type: Function },
+      format     : { type: String }
     },
     data () {
       return {
