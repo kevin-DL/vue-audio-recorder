@@ -1,4 +1,5 @@
 <style lang="scss">
+  @import '../scss/icons';
   .ar {
     width: 420px;
     font-family: 'Roboto', sans-serif;
