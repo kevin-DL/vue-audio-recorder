@@ -237,7 +237,7 @@
               :filename="filename"
               :headers="headers"
               :upload-url="uploadUrl"/>
-            <button v-if="showCustomButton" @click="customAction(record)"> Custom Action </button>
+            <icon-button class="ar__uploader ar-icon ar-icon__xs ar-icon--no-border" v-if="showCustomButton" @click.native="customAction(record)" />
         </div>
       </div>
 
