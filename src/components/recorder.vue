@@ -237,6 +237,7 @@
               :filename="filename"
               :headers="headers"
               :upload-url="uploadUrl"/>
+            <button v-if="showCustomButton" @click="customAction(record)"> Custom Action </button>
         </div>
       </div>
 
@@ -265,6 +266,7 @@
 
       showDownloadButton : { type: Boolean, default: true },
       showUploadButton   : { type: Boolean, default: true },
+      showCustomButton   : {type: Boolean, default: false},
 
       micFailed        : { type: Function },
       beforeRecording  : { type: Function },
@@ -274,7 +276,8 @@
       beforeUpload     : { type: Function },
       successfulUpload : { type: Function },
       selectRecord     : { type: Function },
-      format     : { type: String }
+      customCallback   : { type: Function },
+      format           : { type: String }
     },
     data () {
       return {
@@ -352,6 +355,13 @@
           sampleRate      : this.sampleRate,
           format          : this.format
         })
+      },
+      customAction(record) {
+          if (this.customCallback) {
+            this.customCallback(record)
+          } else {
+            console.log(record)
+          }
       }
     },
     computed: {

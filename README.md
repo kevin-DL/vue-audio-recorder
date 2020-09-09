@@ -42,6 +42,7 @@ npm i vue-audio-recorder --save
 | upload-url            | String   | URL for uploading                                                        |
 | show-download-button  | Boolean  | If it is true show a download button. Default: true                      |
 | show-upload-button    | Boolean  | If it is true show an upload button. Default: true                       |
+| show-custom-button    | Boolean  | If true show another button linked to specific action. Default: true     |
 | before-upload         | Function | Callback fires before uploading                                          |
 | successful-upload     | Function | Callback fires after successful uploading                                |
 | failed-upload         | Function | Callback fires after failure uploading                                   |
@@ -50,6 +51,7 @@ npm i vue-audio-recorder --save
 | pause-recording       | Function | Callback fires after pause recording                                     |
 | after-recording       | Function | Callback fires after click the stop button or exceeding the time limit   |
 | select-record         | Function | Callback fires after choise a record. Returns the record                 |
+| custom-callback       | Function | Callback fires when clicking on the custom button                        |
 
 ## AudioPlayer props
 | Prop                  | Type     | Description                                                     |
